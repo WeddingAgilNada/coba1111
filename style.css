@@ -1,19 +1,16 @@
 /* style.css */
 
-/* --- Variabel CSS Tema Biru Premium --- */
 :root {
-    --color-primary: #1e3a8a;    /* Biru Navy Mewah untuk Aksen Utama */
-    --color-secondary: #bae6fd;  /* Biru Langit Lembut untuk Background Sekunder */
-    --color-text-dark: #0f172a;   /* Teks utama gelap abu kebiruan */
-    --color-text-light: #f0f9ff;  /* Teks terang */
-    --color-accent-btn: #2563eb;  /* Warna tombol biru solid */
+    --color-primary: #1e3a8a;    
+    --color-secondary: #bae6fd;  
+    --color-text-dark: #0f172a;   
+    --color-text-light: #f0f9ff;  
+    --color-accent-btn: #2563eb;  
     --font-script: 'Dancing Script', cursive;
     --font-serif: 'Playfair Display', serif;
     --font-body: 'Montserrat', sans-serif;
-    --max-width: 1000px;
 }
 
-/* Reset dan Box-Sizing */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -22,14 +19,13 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
 }
 
 body {
     font-family: var(--font-body);
     color: var(--color-text-dark);
     line-height: 1.6;
-    background-color: #e0f2fe; /* Warna luar background halaman komputer */
+    background-color: #e0f2fe; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +33,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Container utama disimulasikan seperti tampilan handphone */
 .phone-layout {
     width: 100%;
     max-width: 450px;
@@ -50,30 +45,20 @@ body {
     flex-direction: column;
 }
 
-/* --- Pengaturan Sistem Tab Konten Halaman --- */
-.tab-content {
-    display: none;
+/* Setiap section sekarang tampil utuh berurutan ke bawah */
+.scroll-section {
     width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.tab-content.active {
-    display: flex;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- Animasi Masuk Cover --- */
 .details-section {
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    padding: 20px 15px 90px 15px; /* Memberi ruang di bawah agar tidak tertutup Navbar */
+    scroll-behavior: smooth;
+    padding: 20px 15px 90px 15px; 
     display: flex;
     flex-direction: column;
 }
@@ -88,7 +73,6 @@ body {
     text-align: center;
 }
 
-/* --- Typografi Tema Biru --- */
 .serif-text {
     font-family: var(--font-serif);
     font-weight: 700;
@@ -105,7 +89,6 @@ body {
 .couple-names-sm { font-size: 3rem; margin: 20px 0; }
 .couple-names-lg { font-size: 3.5rem; margin: 5px 0 20px 0; }
 
-/* Header/Cover Utama */
 .invitation-container {
     position: absolute;
     top: 0;
@@ -132,7 +115,7 @@ body {
     width: 220px;
     height: 270px;
     border: 5px solid var(--color-primary);
-    border-radius: 40px 40px 40px 0px; /* Menyamakan kelengkungan kartu pudar */
+    border-radius: 40px 40px 40px 0px; 
     overflow: hidden;
     margin: 15px auto;
     box-shadow: 0 5px 20px rgba(30, 58, 138, 0.15);
@@ -151,7 +134,6 @@ body {
     margin: 10px 0;
 }
 
-/* Desain Seluruh Elemen Tombol */
 .open-button, .location-button, .calendar-button, .submit-button, .copy-button {
     display: inline-block;
     padding: 12px 35px;
@@ -173,11 +155,10 @@ body {
     transform: translateY(-2px);
 }
 
-/* --- Bagian Pembuka Quote & Countdown --- */
 .opening-quote {
     background-color: var(--color-secondary);
     color: var(--color-text-dark);
-    border-radius: 40px 40px 40px 0px; /* Desain lengkung sesuai gambar */
+    border-radius: 40px 40px 40px 0px; 
 }
 
 .countdown-timer {
@@ -211,7 +192,6 @@ body {
     text-align: justify;
 }
 
-/* Info Mempelai */
 .couple-info img.person-photo {
     width: 200px;
     height: 200px;
@@ -221,7 +201,6 @@ body {
     margin: 15px auto;
 }
 
-/* Event Box */
 .event-box {
     background-color: #f0f9ff;
     border: 1px solid var(--color-secondary);
@@ -231,7 +210,6 @@ body {
     width: 100%;
 }
 
-/* Galeri Foto Grid */
 .photo-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -248,7 +226,6 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Dompet Digital */
 .bank-box, .qris {
     display: flex;
     flex-direction: column;
@@ -264,7 +241,6 @@ body {
 .bank-logo { width: 80px; margin-bottom: 10px; }
 .qris-logo { width: 140px; height: 140px; }
 
-/* RSVP Inputs */
 .rsvp-form form input, .rsvp-form select, .rsvp-form textarea {
     padding: 12px;
     border: 1px solid #cbd5e1;
@@ -273,7 +249,6 @@ body {
     margin-top: 5px;
 }
 
-/* Closing Section */
 .closing-section {
     background-color: var(--color-primary);
     color: #ffffff;
@@ -286,7 +261,7 @@ body {
     border: 4px solid #ffffff;
 }
 
-/* --- INTERACTIVE FIXED BOTTOM NAVBAR --- */
+/* --- STICKY FIXED NAVIGATION BOTTOM BAR --- */
 .bottom-navbar {
     position: absolute;
     bottom: 15px;
@@ -320,10 +295,9 @@ body {
     color: var(--color-accent-btn);
 }
 
-/* Music Toggle Switcher Button Floating */
 #music-toggle {
     position: fixed;
-    bottom: 90px; /* Ditinggikan agar tidak bertabrakan dengan Navbar Bawah */
+    bottom: 90px; 
     right: 20px;
     width: 45px;
     height: 45px;
@@ -340,7 +314,6 @@ body {
     font-size: 20px;
 }
 
-/* Image Popup Utility Overlay */
 .image-popup-overlay {
     display: none;
     position: fixed;
