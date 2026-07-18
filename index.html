@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Agil & Nada</title>
+    <link rel="shortcut icon" href="ikontab 3.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght=700&family=Playfair+Display:wght=400;700&family=Montserrat:wght=300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon Menu Bar di Bawah -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <audio id="background-music" loop>
+        <source src="asset/MUSIK AGIL&NADA.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+    
+    <button id="music-toggle">🎵</button>
+
+    <!-- CONTAINER UTAMA (Simulasi Tampilan Mobile Layout) -->
+    <div class="phone-layout">
+
+        <!-- COVER UTAMA -->
+        <div class="invitation-container" id="cover">
+            <header class="header">
+                <img src="asset/dekor atas 3.png" alt="Logo Pernikahan" class="logo">
+            </header>
+
+            <main class="content">
+                <div class="photo-frame">
+                    <img src="asset/FOTO BERDUA.jpeg" alt="Foto Agil & Nada" class="couple-photo">
+                </div>
+                
+                <h2 class="couple-names">Agil & Nada</h2>
+                <h6 class="kepada">kepada Bapak/Ibu/Saudara/i</h6>
+                <h4 class="tamu" id="namaTamu">PAK SYA (AM)</h4>
+                <h5 class="kepada">Kami dengan hormat mengundang Anda untuk dapat hadir dalam acara pernikahan kami</h5>
+              
+                <button class="open-button" id="open-invitation">
+                    BUKA UNDANGAN
+                </button>
+            </main>
+        </div>
+
+        <!-- AREA KONTEN UTAMA (SEMUA DIV BISA DI-SCROLL KE BAWAH) -->
+        <div id="details" class="details-section">
+            
+            <!-- BAGIAN 1: HOME & WAKTU -->
+            <div id="sec-home" class="scroll-section">
+                <div class="section-block opening-quote">
+                    <h3 class="serif-text">The Wedding of</h3>
+                    <h1 class="couple-names-lg">Agil & Nada</h1>
+                    <p class="body-text date-text">Kami berharap Anda menjadi bagian dari hari istimewa kami</p>
+                    <p class="body-text date-text-lg">Minggu, 24 Mei 2026</p>
+
+                    <div class="countdown-timer" id="countdown">
+                        <div class="timer-box"><span id="days">00</span><small>Hari</small></div>
+                        <div class="timer-box"><span id="hours">00</span><small>Jam</small></div>
+                        <div class="timer-box"><span id="minutes">00</span><small>Menit</small></div>
+                        <div class="timer-box"><span id="seconds">00</span><small>Detik</small></div>
+                    </div>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Agil+%26+Nada&dates=20260524T090000/20260524T150000&details=Kami+berharap+Anda+menjadi+bagian+dari+hari+istimewa+kami.+Lihat+undangan+untuk+detail+lainnya.&location=Dsn.+Krajan+Pondok+Kelor%2C+Paiton" target="_blank" class="calendar-button" id="calendar-button">Simpan di Kalender</a>
+                </div>
+            </div>
+
+            <!-- BAGIAN 2: QUOTE & PROFIL -->
+            <div id="sec-profile" class="scroll-section">
+                <div class="section-block">
+                    <img src="asset/dekor tengah.png" alt="Decorative Divider" class="floral-divider">
+                    <h2 class="serif-text">Our Special Day</h2>
+                    <div class="quote-box">
+                        <p class="quote-text">“Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”</p>
+                        <p class="quote-source">Ar Rum Ayat 21</p>
+                    </div>
+                </div>
+
+                <div class="section-block couple-info">
+                    <h3>Assalamualaikum wr. wb.</h3>
+                    <p>Dengan memohon Rahmat dan Ridho Allah SWT yang telah menciptakan makhluk-Nya secara berpasang-pasangan Kami bermaksud menyelenggarakan pernikahan kami</p>
+                    
+                    <h2 class="serif-text">The Groom</h2>
+                    <img src="asset/agil.jpeg" alt="Agil" class="person-photo">
+                    <p class="person-name">MOHAMMAD AGIL HAFIZH</p>
+                    <p class="person-parents">Putra pertama dari Bapak Muhammad Anis Efendi & Ibu Sucik Herawati</p>
+               
+                    <h1 class="couple-names-sm">&</h1>
+
+                    <h2 class="serif-text">The Bride</h2>
+                    <img src="asset/nada.jpeg" alt="Nada" class="person-photo">
+                    <p class="person-name">LATIFAH QUTROTUN NADA</p>
+                    <p class="person-parents">Putri pertama dari Bapak Bawon Efendi dan Ibu Ru'yatul Husna</p>
+                </div>
+            </div>
+
+            <!-- BAGIAN 3: ACARA & LOKASI -->
+            <div id="sec-events" class="scroll-section">
+                <div class="section-block event-details">
+                    <h2 class="serif-text">Save The Date</h2>
+                    <h3 class="serif-text">Wedding Event</h3>
+                    
+                    <div class="event-box">
+                        <img src="asset/ikon resepsi.png" alt="Resepsi Icon" class="event-icon">
+                        <h4 class="event-title">Akad</h4>
+                        <p class="event-date-time">Kamis, 21 Mei 2026</p>
+                        <p class="event-date-time">07.00</p>
+                        <p class="event-location">Dikediaman Mempelai Wanita</p>
+                    </div>
+                    <div class="event-box">
+                        <img src="asset/ikon resepsi.png" alt="Resepsi Icon" class="event-icon">
+                        <h4 class="event-title">Resepsi</h4>
+                        <p class="event-date-time">Minggu, 24 Mei 2026</p>
+                        <p class="event-date-time">14.00 - Selesai</p>
+                        <p class="event-location">Dikediaman Mempelai Pria</p>
+                        <p class="event-address">Taman, Paiton</p>
+                        <a href="https://maps.app.goo.gl/mkcfBRnZxtHycCgq7" target="_blank" class="location-button">Lihat Lokasi</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BAGIAN 4: GALERI -->
+            <div id="sec-gallery" class="scroll-section">
+                <div class="section-block gallery-section">
+                    <h2 class="serif-text">Our Gallery</h2>
+                    <div class="photo-gallery">
+                        <img src="asset/kenangan 1.jpeg" alt="Foto Kenangan 1" class="gallery-photo">
+                        <img src="asset/kenangan 2.jpeg" alt="Foto Kenangan 2" class="gallery-photo">
+                        <img src="asset/kenangan 3.jpeg" alt="Foto Kenangan 3" class="gallery-photo">
+                        <img src="asset/kenangan 4.jpeg" alt="Foto Kenangan 4" class="gallery-photo">
+                        <img src="asset/kenangan 5.jpeg" alt="Foto Kenangan 5" class="gallery-photo">
+                        <img src="asset/kenangan 6.jpeg" alt="Foto Kenangan 6" class="gallery-photo">
+                        <img src="asset/kenangan 7.jpeg" alt="Foto Kenangan 7" class="gallery-photo">
+                        <img src="asset/kenangan 8.jpeg" alt="Foto Kenangan 8" class="gallery-photo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- BAGIAN 5: HADIAH & RSVP -->
+            <div id="sec-gifts" class="scroll-section">
+                <div class="section-block wedding-gifts">
+                    <img src="asset/ikon resepsi.png" alt="Gift Icon" class="event-icon">
+                    <h2 class="serif-text">Wedding Gifts</h2>
+                    <p class="body-text gift-text">Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless.</p>
+
+                    <div class="bank-box">
+                        <img src="asset/bca.png" alt="BCA" class="bank-logo">
+                        <p class="bank-number" id="rekening-agil-bca">2010704249</p>
+                        <p class="bank-name">MOHAMMAD AGIL HAFIZH</p>
+                        <button class="copy-button" data-account-id="rekening-agil-bca">Salin Rekening</button>
+                    </div>
+                    <div class="qris">
+                        <img src="asset/qris.jpeg" alt="qris" class="qris-logo">
+                        <p class="bank-number">SCAN ME</p>
+                        <button class="copy-button" onclick="downloadQRIS()">DOWNLOAD</button>
+                    </div>
+                </div>
+
+                <div class="section-block rsvp-form">
+                    <img src="asset/ikon resepsi.png" alt="Wish Icon" class="event-icon">
+                    <h2 class="serif-text">Wedding Wish & RSVP</h2>
+                    <form id="whatsapp-form">
+                        <input type="text" id="guest-name" placeholder="Masukkan nama anda" required>
+                        <select id="attendance-status" required>
+                            <option value="" disabled selected>Pilih konfirmasi kehadiran *</option>
+                            <option value="Hadir">Hadir</option>
+                            <option value="Tidak Hadir">Tidak Hadir</option>
+                            <option value="Masih Ragu">Masih Ragu</option>
+                        </select>
+                        <textarea rows="4" id="wish-message" placeholder="Ucapan minimal 2 karakter *" required></textarea>
+                        <button type="submit" class="submit-button">Kirim</button>
+                    </form>
+                </div>
+
+                <div class="section-block closing-section">
+                    <img src="asset/ikon akhir.jpeg" alt="Agil & Nada" class="closing-photo">
+                    <h1 class="couple-names-lg closing-names">Agil & Nada</h1>
+                </div>
+
+                <footer class="footer">
+                    <p class="copyright">Copyright © 2025. Made with ❤️ by Agil & Nada</p>
+                </footer>
+            </div>
+
+            <!-- MENU BAR NAVIGATION TOMBOL DI BAWAH (SISTEM SHORTCUT SCROLL) -->
+            <div class="bottom-navbar" id="navbar-invitation">
+                <div class="nav-item active" onclick="scrollToSection('sec-home', this)"><i class="fa-solid fa-house"></i></div>
+                <div class="nav-item" onclick="scrollToSection('sec-profile', this)"><i class="fa-solid fa-calendar-days"></i></div>
+                <div class="nav-item" onclick="scrollToSection('sec-events', this)"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="nav-item" onclick="scrollToSection('sec-gallery', this)"><i class="fa-solid fa-image"></i></div>
+                <div class="nav-item" onclick="scrollToSection('sec-gifts', this)"><i class="fa-solid fa-wallet"></i></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- POPUP DETAILED IMAGE OVERLAY -->
+    <div id="imagePopup" class="image-popup-overlay">
+        <span class="close-popup">&times;</span>
+        <img id="popupImg" src="" alt="Popup Image">
+    </div>
+
+    <script>
+        // --- AMBIL PARAMETER NAMA TAMU ---
+        function getURLParameter(name) {
+            return new URLSearchParams(window.location.search).get(name);
+        }
+
+        window.onload = function() {
+            const tamu = getURLParameter('to');
+            if (tamu) {
+                document.getElementById('namaTamu').innerText = tamu.replace(/\+/g, ' ');
+            }
+        };
+
+        // --- SISTEM AUTOMATIC SMOOTH SCROLL KE ELEMENT DIV TERKAIT ---
+        function scrollToSection(sectionId, element) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            // Ganti status aktif tombol menu bawah
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        // --- DETEKSI SCROLL UNTUK MENGUBAH AKTIF TOMBOL NAVBAR SEIRING DI-SCROLL ---
+        const detailsContainer = document.getElementById('details');
+        const sections = document.querySelectorAll('.scroll-section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        detailsContainer.addEventListener('scroll', () => {
+            let currentSectionId = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - detailsContainer.offsetTop;
+                if (detailsContainer.scrollTop >= sectionTop - 60) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            if (currentSectionId) {
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('onclick').includes(currentSectionId)) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+        });
+
+        // --- POP UP GAMBAR ---
+        const popup = document.getElementById('imagePopup');
+        const popupImg = document.getElementById('popupImg');
+
+        document.querySelectorAll('.gallery-photo, .person-photo').forEach(img => {
+            img.addEventListener('click', () => {
+                popup.style.display = 'flex';
+                popupImg.src = img.src;
+            });
+        });
+
+        popup.addEventListener('click', (e) => {
+            if (e.target !== popupImg) {
+                popup.style.display = 'none';
+            }
+        });
+
+        // --- MUSIK & BUKA UNDANGAN ---
+        const music = document.getElementById('background-music');
+        const musicToggle = document.getElementById('music-toggle');
+        let isMusicPlaying = false;
+
+        function toggleMusic() {
+            if (isMusicPlaying) {
+                music.pause();
+                musicToggle.innerHTML = '🔇';
+            } else {
+                music.play().catch(err => console.log(err));
+                musicToggle.innerHTML = '🎵';
+            }
+            isMusicPlaying = !isMusicPlaying;
+        }
+
+        musicToggle.addEventListener('click', toggleMusic);
+
+        document.getElementById('open-invitation').addEventListener('click', function() {
+            if (!isMusicPlaying) {
+                music.play().then(() => {
+                    isMusicPlaying = true;
+                    musicToggle.innerHTML = '🎵';
+                }).catch(err => console.log(err));
+            }
+
+            document.getElementById('cover').style.transform = 'translateY(-100%)';
+            setTimeout(() => {
+                document.getElementById('cover').style.display = 'none';
+            }, 800);
+        });
+
+        // --- COUNTDOWN ---
+        const weddingDate = new Date("May 24, 2026 14:00:00").getTime();
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (document.getElementById("days")) {
+                document.getElementById("days").innerHTML = days < 10 ? '0' + days : days;
+                document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours;
+                document.getElementById("minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes;
+                document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
+            }
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = '<h2 class="serif-text">Our Special Day is Here!</h2>';
+            }
+        }, 1000);
+
+        // --- SALIN REKENING ---
+        document.querySelectorAll('.copy-button').forEach(button => {
+            button.addEventListener('click', async (e) => {
+                const accountId = e.target.getAttribute('data-account-id');
+                const element = document.getElementById(accountId);
+                if (element) {
+                    await navigator.clipboard.writeText(element.textContent.trim());
+                    alert("Nomor rekening berhasil disalin!");
+                }
+            });
+        });
+
+        // --- RSVP TO WHATSAPP ---
+        document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('guest-name').value;
+            const status = document.getElementById('attendance-status').value;
+            const wish = document.getElementById('wish-message').value;
+            const text = `*Konfirmasi Kehadiran & Ucapan*\n\n*Nama Tamu:* ${name}\n*Status:* ${status}\n*Ucapan:* ${wish}\n\nSelamat untuk Agil & Nada!`;
+            window.open(`https://wa.me/6282142614912?text=${encodeURIComponent(text)}`, '_blank');
+        });
+
+        function downloadQRIS() {
+            const link = document.createElement('a');
+            link.href = 'asset/qris.jpeg';
+            link.download = 'QRIS_Agil_Nada.jpeg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
